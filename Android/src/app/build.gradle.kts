@@ -25,6 +25,8 @@ plugins {
   alias(libs.plugins.hilt.application)
   alias(libs.plugins.oss.licenses)
   kotlin("kapt")
+  alias(libs.plugins.kotlin.kapt)
+  alias(libs.plugins.androidx.room)
 }
 
 android {
@@ -45,6 +47,11 @@ android {
     manifestPlaceholders["applicationName"] = "com.google.ai.edge.gallery.GalleryApplication"
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+    room {
+            // Bắt buộc nếu dùng Room plugin từ 2.6.0+: nơi export schema để dùng auto-migration
+            schemaDirectory("$projectDir/schemas")
+        }
   }
 
   buildTypes {
@@ -69,6 +76,18 @@ android {
 }
 
 dependencies {
+
+  // Room
+  implementation(libs.androidx.room.runtime)
+  implementation(libs.androidx.room.ktx)
+  kapt(libs.androidx.room.compiler)
+  implementation(libs.androidx.room.paging)
+
+  // Paging
+  implementation(libs.androidx.paging.runtime)
+  implementation(libs.androidx.paging.compose)
+
+
   implementation(libs.androidx.core.ktx)
   implementation(libs.androidx.lifecycle.runtime.ktx)
   implementation(libs.androidx.activity.compose)
