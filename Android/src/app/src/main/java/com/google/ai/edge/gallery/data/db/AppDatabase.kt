@@ -1,4 +1,4 @@
-package <your.package>.data.db
+package com.google.ai.edge.gallery.data.db
 
 import android.content.Context
 import androidx.room.Database
