@@ -28,11 +28,11 @@ plugins {
 }
 
 android {
-  namespace = "com.google.ai.edge.gallery"
+  namespace = "com.tqa.asisai"
   compileSdk = 35
 
   defaultConfig {
-    applicationId = "com.google.aiedge.gallery"
+    applicationId = "com.tqa.asisai"
     minSdk = 31
     targetSdk = 35
     versionCode = 13
