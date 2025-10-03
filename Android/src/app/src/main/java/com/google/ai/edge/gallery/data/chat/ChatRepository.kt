@@ -1,4 +1,4 @@
-package <your.package>.data.chat
+package com.google.ai.edge.gallery.data.chat
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
