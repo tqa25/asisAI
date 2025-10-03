@@ -1,4 +1,4 @@
-package com.google.ai.edge.ui.common
+package com.google.ai.edge.gallery.ui.common
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
