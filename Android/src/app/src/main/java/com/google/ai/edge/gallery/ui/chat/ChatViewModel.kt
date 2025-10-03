@@ -1,4 +1,4 @@
-package <your.package>.ui.chat
+package com.google.ai.edge.gallery.ui.chat
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
